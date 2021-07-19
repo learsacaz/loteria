@@ -1,0 +1,22 @@
+<div styles="text-align:center">
+    <app-balota [valor]="valor1"></app-balota>
+    <app-balota [valor]="valor2"></app-balota>
+    <app-balota [valor]="valor3"></app-balota>
+    <app-balota [valor]="valor4"></app-balota>
+    <app-balota [valor]="valor5"></app-balota>
+    <div>
+        <hr/>
+        <button (click)="jugar()">Jugar</button>
+        <hr/>
+        <h2>{{numeroGanador}}</h2>
+    </div>
+    <div>
+        <app-par-impar [valor]="suma" (parImpar)="llamarParImpar($event)" #calculo></app-par-impar>
+        <h2>{{mensaje}}</h2>
+    </div>
+    <hr/>
+    <div>
+        <p>Boton desde el padre</p>
+        <button (click)="calculo.calcularParImpar(suma)">Calculo</button>
+    </div>
+</div>
